@@ -5,10 +5,11 @@
   font-family: 'Encode Sans', sans-serif;
   
 }
-.root{
-  background-color: #19283A;
-}
 
+body{
+  background-color: #19283A;
+
+}
 .navbar{
   background-color: transparent;
 }

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
     color: #fff;
-    background: ${({ ligthBg }) => (ligthBg ? '#010606' : '010606')}
+    background:${({ lightBg }) => (lightBg ? '#3C4A5A' : ' #19283A')}
     ;
 
     @media screen and (max-width: 768px){
@@ -26,11 +26,11 @@ export const InfoRow = styled.div`
     display: flex;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
-    grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2' 'col1'` : `'col1' 'col2'`)};
+    grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1' 'col2'` : `'col2' 'col1'`)};
 
     @media screen and (max-width: 768px){
         display: grid;
-        grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+        grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2' 'col1'` : `'col1 col1' 'col2 col2'`)};
     };
 
 `;
@@ -39,14 +39,13 @@ export const Column1 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col1;
-    `;
+`;
 
 export const Column2 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col2;
-
-    `;
+`;
 
 export const TextWrapper = styled.div`
     max-width: 540px;
@@ -86,20 +85,19 @@ export const BtnWrap = styled.div`
 `;
 
 export const ImgWrapper = styled.div`
+    width: 40vw;
     
+    @media screen and (max-width: 768px){
+        width: 100%;
+        margin: auto;
+    
+    }
 `;
 
 export const Img = styled.img`
-    width: 50vw;
     margin: 0 0 10px 0;
     padding-right: 0;
 
-    @media screen and (max-width: 768px){
-        width: 110vw;
-        margin: auto;
-        margin-left: -90px
-
-    }
 `
 
 

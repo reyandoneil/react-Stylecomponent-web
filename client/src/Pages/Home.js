@@ -7,7 +7,6 @@ function Home() {
     const toggle = () => {
         setIsOpen(!isOpen)
     }
-    console.log(homeObjOne);
     return (
         <>
             <Navbar toggle={toggle} />

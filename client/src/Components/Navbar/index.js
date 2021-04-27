@@ -1,4 +1,5 @@
-import React from 'react'
+import '../../App.css'
+import React, { useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 import {
     Nav,
@@ -11,12 +12,23 @@ import {
     NavBtnLink
 } from './NavbarElements'
 
-function index({toggle}) {
+function Navbar({ toggle }) {
+    const [navbarColor, setNavbarColor] = useState(false)
+
+    const chancgeNavbarColor = () => {
+        console.log(window.scrollY);
+        if (window.scrollY >= 20) {
+            setNavbarColor(true)
+        } else {
+            setNavbarColor(false)
+        }
+    }
+    window.addEventListener('scroll', chancgeNavbarColor)
+
     return (
         <>
-
             <Nav >
-                <NavbarContainer>
+                <NavbarContainer className={navbarColor ? 'navbar colorChange' : 'navbar'}>
                     <NavLogo to="/">EDULEX</NavLogo>
                     <MobileIcon onClick={toggle} >
                         <FaBars />
@@ -36,4 +48,4 @@ function index({toggle}) {
     )
 }
 
-export default index
+export default Navbar

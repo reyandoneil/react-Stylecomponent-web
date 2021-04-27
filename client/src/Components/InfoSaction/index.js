@@ -31,7 +31,7 @@ function InfoSaction({
     primary,
     dark
 }) {
-    console.log(img,'------------>ini id data');
+    console.log(imgStart,'------------>ini id data');
     return (
         <>
             <InfoContainer lightBg={lightBg} id={id} >
@@ -44,7 +44,7 @@ function InfoSaction({
                                 <Subtitle darkText={darkText}>{description}</Subtitle>
                                 <BtnWrap>
                                     <Button
-                                        to='home'
+                                        to='/'
                                         primary={primary ? 1 : 0}
                                         dark={dark ? 1 : 0}
                                         dark2={dark ? 1 : 0}
